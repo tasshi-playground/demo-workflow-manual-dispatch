@@ -8,4 +8,6 @@ jobs:
     name: View github.event
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{toJSON(github.event)}}"
+      - run: echo -e "${{toJSON(github.event)}}"
+      - run: echo "${GITHUB_SHA}"
+      - run: echo "${GITHUB_REF}"
