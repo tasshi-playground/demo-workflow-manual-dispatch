@@ -1,0 +1,13 @@
+name: manual-view-env
+
+on:
+  workflow_dispatch:
+
+jobs:
+  version:
+    name: View env
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${GITHUB_SHA}"
+      - run: echo "${GITHUB_REF}"
+      - run: echo -e '${{toJSON(env)}}'
