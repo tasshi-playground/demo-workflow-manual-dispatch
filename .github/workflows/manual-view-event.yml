@@ -5,7 +5,7 @@ on:
 
 jobs:
   version:
-    name: Release
+    name: View github.event
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{github.event}}""release"
+      - run: echo "${{toJSON(github.event)}}"
